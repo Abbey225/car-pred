@@ -1,0 +1,29 @@
+<html >
+<head>
+  <title>Predict car price</title>
+</head>
+
+<body>
+ <div>
+	<h1>car price</h1>
+
+    <form action="{{ url_for('getprediction')}}"method="post">
+    	<input type="text" name="year" placeholder="year" required="required" />
+        <input type="text" name="transmission" placeholder="transmission" required="required" />
+        <input type="text" name="engine" placeholder="engine" required="required" />
+    	<input type="text" name="max_power" placeholder="max_power" required="required" />
+    	<input type="text" name="torque" placeholder="torque" required="required" />
+
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">getprediction</button>
+    </form>
+
+   <br>
+   <br>
+   {{ output }}
+
+ </div>
+
+
+</body>
+</html>
